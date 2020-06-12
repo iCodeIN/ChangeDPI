@@ -15,6 +15,7 @@ public class MainActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		
+		setTitle(R.string.activity_main);
 		setContentView(R.layout.activity_main);
 		
 	}
