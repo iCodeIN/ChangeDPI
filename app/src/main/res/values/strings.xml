@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	
+	<!-- имя или ник локализатора -->
+	<string name="app_translator">rx1310 (Google Translate)</string>
+	<string name="app_translator_url">@string/app_author_url</string>
+	
+	<!-- активности -->
+	<string name="activity_main">Изменение DPI</string>
+	
+</resources>
