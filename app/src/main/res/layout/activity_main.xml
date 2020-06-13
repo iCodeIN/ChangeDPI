@@ -21,14 +21,16 @@
 		android:layout_height="wrap_content"
 		android:layout_marginBottom="10dp"
 		android:hint="Enter num"
-		android:inputType="number"/>
+		android:inputType="number"
+		android:id="@+id/etInputNum"/>
 
 	<Button
 		android:layout_width="match_parent"
 		style="?android:attr/buttonBarButtonStyle"
 		android:layout_height="wrap_content"
-		android:text="Done"
-		android:layout_marginBottom="10dp"/>
+		android:text="Apply"
+		android:layout_marginBottom="10dp"
+		android:id="@+id/btnApply"/>
 
 </LinearLayout>
 
