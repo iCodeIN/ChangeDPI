@@ -11,16 +11,32 @@
 	<TextView
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
-		android:text="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quisquam ullam molestiae tenetur, ad et repellat repellendus vitae illum dolores ex maxime sint consequatur, quibusdam quas minima cupiditate saepe distinctio sequi?"
+		android:gravity="left|center"
+		android:layout_marginBottom="10dp"
+		android:id="@+id/tvAppInfo"
+		android:alpha="0.8"/>
+
+	<TextView
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:text="@string/desc_app"
 		android:gravity="left|center"
 		android:layout_marginBottom="10dp"/>
+
+	<TextView
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:text="@string/desc_required_su"
+		android:gravity="left|center"
+		android:layout_marginBottom="10dp"
+		android:textColor="#FFFF3737"
+		android:textStyle="bold"/>
 
 	<EditText
 		android:layout_width="match_parent"
 		android:ems="10"
 		android:layout_height="wrap_content"
-		android:layout_marginBottom="10dp"
-		android:hint="Enter num"
+		android:hint="@string/hint_input_dpi"
 		android:inputType="number"
 		android:id="@+id/etInputNum"/>
 
@@ -28,7 +44,7 @@
 		android:layout_width="match_parent"
 		style="?android:attr/buttonBarButtonStyle"
 		android:layout_height="wrap_content"
-		android:text="Apply"
+		android:text="@string/action_apply"
 		android:layout_marginBottom="10dp"
 		android:id="@+id/btnApply"/>
 
