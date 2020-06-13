@@ -9,8 +9,8 @@ android {
         applicationId "o1310.rx1310.app.cdpi"
         minSdkVersion 14
         targetSdkVersion 29
-        versionCode 1
-        versionName "Alpha"
+        versionCode 200613
+        versionName "1"
     }
 	
     buildTypes {

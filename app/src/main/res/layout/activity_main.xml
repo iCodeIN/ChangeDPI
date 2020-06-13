@@ -46,7 +46,8 @@
 		android:layout_height="wrap_content"
 		android:text="@string/action_apply"
 		android:layout_marginBottom="10dp"
-		android:id="@+id/btnApply"/>
+		android:id="@+id/btnApply"
+		android:gravity="center"/>
 
 </LinearLayout>
 
