@@ -16,7 +16,7 @@ import android.widget.Toast;
 public class MainActivity extends Activity {
 
 	Button applyButton;
-	EditText inputEditText;
+	EditText inputField;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -25,13 +25,14 @@ public class MainActivity extends Activity {
 		setTitle(R.string.activity_main);
 		setContentView(R.layout.activity_main);
 		
-		inputEditText = findViewById(R.id.etInputNum);
+		inputField = findViewById(R.id.etInputNum);
 		
 		applyButton = findViewById(R.id.btnApply);
 		applyButton.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
-				
+				String runCmd = CmdExec.execute(true, "wm density " + inputField.getText().toString()).getResult();
+				applyButton.setText(runCmd);
 			}
 		});
 		
