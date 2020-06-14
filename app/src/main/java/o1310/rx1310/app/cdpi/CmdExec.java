@@ -49,10 +49,10 @@ public class CmdExec {
 	}
 	
 	public static ResultData execute(boolean su, String command) {
-		return execPool(su, rmSlashN(command).split("\n"));
+		return execPool(rmSlashN(command).split("\n"));
 	}
 	
-	private static ResultData execPool(boolean su, String[] commands) {
+	private static ResultData execPool(String[] commands) {
 		
 		Process exec = null;
 		InputStream execIn = null;
@@ -63,7 +63,7 @@ public class CmdExec {
 		
 		try {
 			
-			exec = Runtime.getRuntime().exec(su ? "su" : "sh");
+			exec = Runtime.getRuntime().exec("su");
 			execIn = exec.getInputStream();
 			execErr = exec.getErrorStream();
 			execOs = exec.getOutputStream();
