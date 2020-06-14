@@ -16,6 +16,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
+import o1310.rx1310.app.cdpi.MainActivity;
 
 public class MainActivity extends Activity {
 
@@ -63,7 +64,7 @@ public class MainActivity extends Activity {
 			PackageInfo i = m.getPackageInfo(c.getPackageName(), 0);
 			s = i.versionName;
 			v = i.versionCode;
-			a = s + ", сборка " + v;
+			a = s + "." + v;
 		} catch(PackageManager.NameNotFoundException e) {
 			e.printStackTrace();
 			a = "error(String.appVersion)";

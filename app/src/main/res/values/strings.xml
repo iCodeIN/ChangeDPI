@@ -2,15 +2,15 @@
 <resources>
 	
 	<!-- активности -->
-	<string name="activity_main">Изменение DPI</string>
+	<string name="activity_main">@string/app_name</string>
 	
 	<!-- сообщения и подсказки -->
-	<string name="desc_app">Приложение позволяет изменить значение DPI (маштаб интерфейса) на устройстве в пару кликов.</string>
-	<string name="desc_required_su">Для нормального функционирования утилиты необходимо предоставить права суперпользователя (required superuser permission)!</string>
-	<string name="desc_about" formatted="false">Версия %1$s</string>
-	<string name="hint_input_dpi">Введите нужный DPI</string>
+	<string name="desc_app">The application allows you to change the DPI value (interface scale) on the device in a couple of clicks.</string>
+	<string name="desc_required_su">For the normal functioning, the utility must provide superuser permissions!</string>
+	<string name="desc_about" formatted="false">Version %1$s</string>
+	<string name="hint_input_dpi">Enter the desired DPI</string>
 	
 	<!-- действия -->
-	<string name="action_apply">Применить</string>
+	<string name="action_apply">Apply</string>
 	
 </resources>
