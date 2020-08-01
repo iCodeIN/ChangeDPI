@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://o1310.github.io">
-    <img src="" alt="ChangeDPI logo" width="50%">
+    <img src="https://raw.githubusercontent.com/o1310/ChangeDPI/master/app-logo.png" alt="ChangeDPI logo" width="50%">
   </a>
 </p>
 <br>
