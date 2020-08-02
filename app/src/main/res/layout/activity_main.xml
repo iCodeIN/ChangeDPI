@@ -29,7 +29,7 @@
 		android:text="@string/desc_required_su"
 		android:gravity="left|center"
 		android:layout_marginBottom="10dp"
-		android:textColor="#FFFF3737"
+		android:textColor="#FFE84A4A"
 		android:textStyle="bold"/>
 
 	<EditText
