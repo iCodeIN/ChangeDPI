@@ -11,7 +11,6 @@
 	<TextView
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
-		android:gravity="left|center"
 		android:layout_marginBottom="10dp"
 		android:id="@+id/tvAppInfo"
 		android:alpha="0.8"/>
@@ -20,14 +19,12 @@
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
 		android:text="@string/desc_app"
-		android:gravity="left|center"
 		android:layout_marginBottom="10dp"/>
 
 	<TextView
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
 		android:text="@string/desc_required_su"
-		android:gravity="left|center"
 		android:layout_marginBottom="10dp"
 		android:textColor="#FFE84A4A"
 		android:textStyle="bold"/>
