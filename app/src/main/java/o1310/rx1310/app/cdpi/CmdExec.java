@@ -116,7 +116,7 @@ public class CmdExec {
 		
 	}
 
-	public static String read(InputStream is) {
+	/*public static String read(InputStream is) {
 		
 		try {
 			
@@ -132,7 +132,7 @@ public class CmdExec {
 			e.printStackTrace(); return e.toString(); 
 		}
 		
-	}
+	}*/
 
 	public static String rmSlashN(String text) {
 		
@@ -147,4 +147,5 @@ public class CmdExec {
 		return text;
 		
 	}
+	
 }
