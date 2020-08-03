@@ -34,11 +34,11 @@ public class MainActivity extends Activity {
 		inputField = findViewById(R.id.etInputNum);
 		
 		appInfoText = findViewById(R.id.tvAppInfo);
-		appInfoText.setText(String.format(getString(R.string.desc_about), appVersion(this)));
+		appInfoText.setText(String.format(getString(R.string.desc_about), appVersion(this))); // Отображение версии приложения на экране
 		appInfoText.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
-				Toast.makeText(MainActivity.this, "made with " + ("♥️") + " by rx1310 (from o1310)", Toast.LENGTH_LONG).show();
+				Toast.makeText(MainActivity.this, "made with " + ("♥️") + " by rx1310 (from o1310)", Toast.LENGTH_LONG).show(); // Маленькая пасхалка
 			}
 		});
 		
@@ -46,13 +46,15 @@ public class MainActivity extends Activity {
 		applyButton.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
-				String runCmd = CmdExec.execute(true, "wm density " + inputField.getText().toString()).getResult();
-				applyButton.setText(runCmd);
+				String runCmd = CmdExec.execute(true, "wm density " + inputField.getText().toString()).getResult(); // выполнение команды
+				applyButton.setText(runCmd); // отображение текущего значения DPI в кнопке
 			}
 		});
 		
 	}
 	
+	/* Вычисление версии APK.
+	 * Возвращается строка в формате VERSION_NAME.VERSION_CODE (напр.: 1.191231) */
 	public static String appVersion(Context c) {
 
 		String s, a;
