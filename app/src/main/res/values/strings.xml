@@ -5,7 +5,7 @@
 	<string name="activity_main">@string/app_name</string>
 	
 	<!-- сообщения и подсказки -->
-	<string name="current_dpi">Current DPI: %1$s</string>
+	<string name="default_dpi">Default device DPI: %1$s</string>
 	<string name="desc_app">The application allows you to change the DPI value (interface scale) on the device in a couple of clicks.</string>
 	<string name="desc_required_su">For the normal functioning, the utility must provide superuser permissions!</string>
 	<string name="desc_about" formatted="false">Version: %1$s</string>

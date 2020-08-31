@@ -25,7 +25,7 @@ public class MainActivity extends Activity {
 
 	Button applyButton;
 	EditText inputField;
-	TextView appInfoText, currentDPI;
+	TextView appInfoText, defaultDPI;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -35,7 +35,7 @@ public class MainActivity extends Activity {
 		setContentView(R.layout.activity_main);
 		
 		inputField = findViewById(R.id.etInputNum);
-		inputField.setText(getCurrentDPI());
+		//inputField.setText(getDefaultDPI());
 		
 		appInfoText = findViewById(R.id.tvAppInfo);
 		appInfoText.setText(String.format(getString(R.string.desc_about), appVersion(this))); // Отображение версии приложения на экране
@@ -46,8 +46,8 @@ public class MainActivity extends Activity {
 			}
 		});
 		
-		currentDPI = findViewById(R.id.currentDPI);
-		currentDPI.setText(String.format(getString(R.string.current_dpi), getCurrentDPI()));
+		defaultDPI = findViewById(R.id.defaultDPI);
+		defaultDPI.setText(String.format(getString(R.string.default_dpi), getDefaultDPI()));
 		//currentDPI.setText(CmdExec.execute(true, "getprop ro.sf.lcd_density").getResult());
 		
 		applyButton = findViewById(R.id.btnApply);
@@ -84,10 +84,10 @@ public class MainActivity extends Activity {
 
 	}
 	
-	/* Вычисление текущего значения DPI
+	/* Вычисление стандартного значения DPI
 	 * На экран выводится значение строки ro.sf.lcd_density из файла system/build.prop
 	 * Взято из: https://github.com/rx1310/android_packages_apps_ParanoidOTA/blob/marshmallow/src/com/paranoid/paranoidota/Utils.java */
-	String getCurrentDPI() {
+	String getDefaultDPI() {
 		
 		try {
 			
