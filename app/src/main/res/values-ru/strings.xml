@@ -5,6 +5,7 @@
 	<string name="activity_main">Изменение DPI</string>
 	
 	<!-- сообщения и подсказки -->
+	<string name="default_dpi" formatted="false">Текущий размер DPI: %1$s</string>
 	<string name="desc_app">Приложение позволяет изменить значение DPI (маштаб интерфейса) на устройстве в пару кликов.</string>
 	<string name="desc_required_su">Для нормального функционирования утилиты необходимо предоставить права суперпользователя (required superuser permission)!</string>
 	<string name="desc_about" formatted="false">Версия: %1$s</string>

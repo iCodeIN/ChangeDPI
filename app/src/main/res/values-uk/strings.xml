@@ -5,6 +5,7 @@
 	<string name="activity_main">Заміни DPI</string>
 	
 	<!-- сообщения и подсказки -->
+	<string name="default_dpi" formatted="false">Поточне значення DPI: %1$s</string>
 	<string name="desc_app">Додаток дає можливість змінити значення DPI (маштабування  інтерфейсу) на приладі за декілька кліків.</string>
 	<string name="desc_required_su">Для нормального функціонування утиліти необхідно  надати право superuser!</string>
 	<string name="desc_about" formatted="false">Версія: %1$s</string>
