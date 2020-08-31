@@ -9,7 +9,7 @@ android {
         applicationId "o1310.rx1310.app.cdpi"
         minSdkVersion 14
         targetSdkVersion 29
-        versionCode 200803
+        versionCode 200831
         versionName "alpha-3"
     }
 	

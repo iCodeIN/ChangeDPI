@@ -16,13 +16,16 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 import o1310.rx1310.app.cdpi.MainActivity;
 
 public class MainActivity extends Activity {
 
 	Button applyButton;
 	EditText inputField;
-	TextView appInfoText;
+	TextView appInfoText, currentDPI;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -41,6 +44,10 @@ public class MainActivity extends Activity {
 				Toast.makeText(MainActivity.this, "made with " + ("♥️") + " by rx1310 (from o1310)", Toast.LENGTH_LONG).show(); // Маленькая пасхалка
 			}
 		});
+		
+		currentDPI = findViewById(R.id.currentDPI);
+		currentDPI.setText(String.format(getString(R.string.current_dpi), getCurrentDPI()));
+		//currentDPI.setText(CmdExec.execute(true, "getprop ro.sf.lcd_density").getResult());
 		
 		applyButton = findViewById(R.id.btnApply);
 		applyButton.setOnClickListener(new View.OnClickListener() {
@@ -74,6 +81,36 @@ public class MainActivity extends Activity {
 
 		return a;
 
+	}
+	
+	/* Вычисление текущего значения DPI
+	 * На экран выводится значение строки ro.sf.lcd_density из файла system/build.prop
+	 * Взято из: https://github.com/rx1310/android_packages_apps_ParanoidOTA/blob/marshmallow/src/com/paranoid/paranoidota/Utils.java */
+	String getCurrentDPI() {
+		
+		try {
+			
+			Process p = Runtime.getRuntime().exec("getprop ro.sf.lcd_density");
+			BufferedReader b = new BufferedReader(new InputStreamReader(p.getInputStream()));
+			StringBuilder s = new StringBuilder();
+			String l;
+			
+			while((l = b.readLine()) != null) {
+				
+				s.append(l);
+				
+			}
+			
+			return s.toString();
+			
+		} catch(IOException e) {
+			
+			// Runtime error
+			
+		}
+		
+		return null;
+		
 	}
 	
 }
