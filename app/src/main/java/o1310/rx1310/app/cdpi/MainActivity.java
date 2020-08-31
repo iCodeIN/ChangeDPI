@@ -35,6 +35,7 @@ public class MainActivity extends Activity {
 		setContentView(R.layout.activity_main);
 		
 		inputField = findViewById(R.id.etInputNum);
+		inputField.setText(getCurrentDPI());
 		
 		appInfoText = findViewById(R.id.tvAppInfo);
 		appInfoText.setText(String.format(getString(R.string.desc_about), appVersion(this))); // Отображение версии приложения на экране
