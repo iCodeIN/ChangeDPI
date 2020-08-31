@@ -4,47 +4,86 @@
 	android:layout_width="match_parent"
 	android:layout_height="match_parent"
 	android:orientation="vertical"
-	android:gravity="center"
-	android:paddingEnd="?android:attr/listPreferredItemPaddingEnd"
-	android:paddingStart="?android:attr/listPreferredItemPaddingStart">
+	android:gravity="center">
 
-	<TextView
+	<LinearLayout
+		android:paddingEnd="?android:attr/listPreferredItemPaddingEnd"
+		android:paddingStart="?android:attr/listPreferredItemPaddingStart"
+		android:orientation="vertical"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content">
+
+		<TextView
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:text="@string/desc_app"
+			android:alpha="0.7"
+			android:layout_marginBottom="10dp"/>
+
+		<TextView
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:text="@string/desc_required_su"
+			android:layout_marginBottom="10dp"
+			android:textColor="#FFFF6969"/>
+
+		<EditText
+			android:layout_width="match_parent"
+			android:ems="10"
+			android:layout_height="wrap_content"
+			android:hint="@string/hint_input_dpi"
+			android:inputType="number"
+			android:id="@+id/etInputNum"/>
+
+		<Button
+			android:layout_width="match_parent"
+			style="?android:attr/buttonBarButtonStyle"
+			android:layout_height="wrap_content"
+			android:text="@string/action_apply"
+			android:layout_marginBottom="10dp"
+			android:id="@+id/btnApply"
+			android:gravity="center"/>
+
+	</LinearLayout>
+
+	<FrameLayout
+		android:paddingEnd="?android:attr/listPreferredItemPaddingEnd"
+		android:paddingStart="?android:attr/listPreferredItemPaddingStart"
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
-		android:layout_marginBottom="10dp"
-		android:id="@+id/tvAppInfo"
-		android:alpha="0.8"/>
+		android:background="@color/colorAccent"
+		android:paddingTop="14dp"
+		android:paddingBottom="14dp">
 
-	<TextView
-		android:layout_width="match_parent"
-		android:layout_height="wrap_content"
-		android:text="@string/desc_app"
-		android:layout_marginBottom="10dp"/>
+		<LinearLayout
+			android:orientation="vertical"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content">
 
-	<TextView
-		android:layout_width="match_parent"
-		android:layout_height="wrap_content"
-		android:text="@string/desc_required_su"
-		android:layout_marginBottom="10dp"
-		android:textColor="#FFE84A4A"
-		android:textStyle="bold"/>
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:textAppearance="?android:attr/textAppearanceSmall"
+				android:textColor="#FFFFFFFF"
+				android:gravity="left|center"
+				android:id="@+id/tvAppInfo"/>
 
-	<EditText
-		android:layout_width="match_parent"
-		android:ems="10"
-		android:layout_height="wrap_content"
-		android:hint="@string/hint_input_dpi"
-		android:inputType="number"
-		android:id="@+id/etInputNum"/>
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="by rx1310 (o1310)"
+				android:textColor="#FFFFFFFF"
+				android:alpha="0.5"/>
 
-	<Button
-		android:layout_width="match_parent"
-		style="?android:attr/buttonBarButtonStyle"
-		android:layout_height="wrap_content"
-		android:text="@string/action_apply"
-		android:layout_marginBottom="10dp"
-		android:id="@+id/btnApply"
-		android:gravity="center"/>
+		</LinearLayout>
+
+		<ImageView
+			android:src="@drawable/ic_logo"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_gravity="right|center"/>
+
+	</FrameLayout>
 
 </LinearLayout>
 
