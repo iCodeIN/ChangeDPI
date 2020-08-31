@@ -7,9 +7,13 @@
 package o1310.rx1310.app.cdpi;
 
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -20,6 +24,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import o1310.rx1310.app.cdpi.MainActivity;
+import o1310.rx1310.app.cdpi.R;
 
 public class MainActivity extends Activity {
 
@@ -42,6 +47,7 @@ public class MainActivity extends Activity {
 		appInfoText.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
+				aboutDialog();
 				Toast.makeText(MainActivity.this, "made with " + ("♥️") + " by rx1310 (from o1310)", Toast.LENGTH_LONG).show(); // Маленькая пасхалка
 			}
 		});
@@ -112,6 +118,37 @@ public class MainActivity extends Activity {
 		
 		return null;
 		
+	}
+	
+	// О программе
+	void aboutDialog(){
+
+		// создаем диалог
+		AlertDialog.Builder b = new AlertDialog.Builder(this);
+
+		b.setTitle(R.string.about_dialog_title);
+		//b.setIcon(R.drawable.ic_logo);
+		b.setMessage(R.string.about_message);
+		b.setPositiveButton(android.R.string.cancel, new DialogInterface.OnClickListener() { // обработка нажатия кнопки "Да"
+				public void onClick(DialogInterface d, int i) {
+					d.cancel();
+				}
+			});
+		b.setNegativeButton("Telegram", new DialogInterface.OnClickListener() { // обработка нажатия кнопки "Telegram"
+				public void onClick(DialogInterface d, int i) {
+					startActivity(new Intent (Intent.ACTION_VIEW, Uri.parse("https://t.me/o1310")));
+				}
+			});
+		b.setNeutralButton(R.string.about_dialog_action_source_code, new DialogInterface.OnClickListener() { // обработка нажатия кнопки "Да"
+				public void onClick(DialogInterface d, int i) {
+					startActivity(new Intent (Intent.ACTION_VIEW, Uri.parse("https://github.com/o1310/ChangeDPI")));
+				}
+			});
+
+		AlertDialog a = b.create(); // создаем диалог
+
+		a.show(); // отображаем диалог
+
 	}
 	
 }

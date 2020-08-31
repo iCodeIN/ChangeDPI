@@ -11,6 +11,11 @@
 	<string name="desc_about" formatted="false">Version: %1$s</string>
 	<string name="hint_input_dpi">Enter the desired DPI</string>
 	
+	<!-- диалоги -->
+	<string name="about_dialog_title">Hi, user!</string>
+	<string name="about_dialog_action_source_code">Source code</string>
+	<string name="about_message">ChangeDPI is an open source project and is distributed free of charge under MIT license.\n\nDeveloped by a member of the team of developers «o1310» - rx1310.</string>
+	
 	<!-- действия -->
 	<string name="action_apply">Apply changes</string>
 	
