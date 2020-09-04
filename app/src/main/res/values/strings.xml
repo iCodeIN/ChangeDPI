@@ -15,6 +15,8 @@
 	<string name="about_dialog_title">Hi, user!</string>
 	<string name="about_dialog_action_source_code">Source code</string>
 	<string name="about_message">ChangeDPI is an open source project and is distributed free of charge under MIT license.\n\nDeveloped by a member of the team of developers «o1310» - rx1310.</string>
+	<string name="reboot_dialog_title">Reboot system</string>
+	<string name="reboot_dialog_message">It is recommended that you restart the system for the changes to take effect.</string>
 	
 	<!-- действия -->
 	<string name="action_apply">Apply changes</string>

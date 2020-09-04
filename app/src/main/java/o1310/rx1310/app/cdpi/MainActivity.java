@@ -25,12 +25,15 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import o1310.rx1310.app.cdpi.MainActivity;
 import o1310.rx1310.app.cdpi.R;
+import android.text.TextUtils;
 
 public class MainActivity extends Activity {
 
 	Button applyButton;
 	EditText inputField;
 	TextView appInfoText, defaultDPI;
+	
+	String cmdRebootSystem = "su -c svc power reboot";
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -60,8 +63,14 @@ public class MainActivity extends Activity {
 		applyButton.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
+				
 				String runCmd = CmdExec.execute(true, "wm density " + inputField.getText().toString()).getResult(); // выполнение команды
 				applyButton.setText(runCmd); // отображение текущего значения DPI в кнопке
+				
+				if (!TextUtils.isEmpty(inputField.getText().toString())) {
+					rebootDialog();
+				}
+				
 			}
 		});
 		
@@ -121,7 +130,7 @@ public class MainActivity extends Activity {
 	}
 	
 	// О программе
-	void aboutDialog(){
+	void aboutDialog() {
 
 		// создаем диалог
 		AlertDialog.Builder b = new AlertDialog.Builder(this);
@@ -149,6 +158,28 @@ public class MainActivity extends Activity {
 
 		a.show(); // отображаем диалог
 
+	}
+	
+	void rebootDialog() {
+		
+		AlertDialog.Builder b = new AlertDialog.Builder(MainActivity.this);
+
+		b.setTitle(R.string.reboot_dialog_title);
+		b.setIcon(R.mipmap.ic_launcher_round);
+		b.setMessage(R.string.reboot_dialog_message);
+		b.setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() { // обработка нажатия кнопки "Да"
+			public void onClick(DialogInterface d, int i) {
+				CmdExec.execute(true, cmdRebootSystem).getResult(); // выполнение команды
+			}
+		});
+		b.setNegativeButton(android.R.string.no, new DialogInterface.OnClickListener() { // обработка нажатия кнопки "Да"
+			public void onClick(DialogInterface d, int i) {
+				d.cancel();
+			}
+		});
+
+		b.show();
+		
 	}
 	
 }
