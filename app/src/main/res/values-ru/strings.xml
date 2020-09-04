@@ -15,6 +15,8 @@
 	<string name="about_dialog_title">Привет!</string>
 	<string name="about_dialog_action_source_code">Исходный код</string>
 	<string name="about_message">ChangeDPI — это маленькая утилита для смены DPI на устройстве (required superuser permission).\n\nChangeDPI (cdpi) является проектом с открытым исходным кодом и бесплатно распространяется по лицензии MIT.\n\nРазработано участником команды разработчиков «o1310» — rx1310.</string>
+	<string name="reboot_dialog_title">Перезапуск системы</string>
+	<string name="reboot_dialog_message">Рекомендуется выполнить перезапуск системы, чтобы изменения вступили в силу!</string>
 	
 	<!-- действия -->
 	<string name="action_apply">Применить</string>

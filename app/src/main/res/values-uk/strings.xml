@@ -11,6 +11,10 @@
 	<string name="desc_about" formatted="false">Версія: %1$s</string>
 	<string name="hint_input_dpi">Введіть потрібний DPI</string>
 	
+	<!-- диалоги -->
+	<string name="reboot_dialog_title">Перезапуск</string>
+	<string name="reboot_dialog_message">Рекомендується виконати перезапуск системи, щоб зміни вступили в силу.</string>
+	
 	<!-- действия -->
 	<string name="action_apply">Застосуйте</string>
 	
