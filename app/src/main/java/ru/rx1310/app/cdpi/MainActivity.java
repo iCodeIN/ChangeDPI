@@ -1,4 +1,4 @@
-// ! rx1310 <rx1310@inbox.ru> | Copyright (c) o1310, 2020 | MIT License
+// ! rx1310 <rx1310@inbox.ru> | Copyright (c) rx1310, 2020 | MIT License
 
 package ru.rx1310.app.cdpi;
 
@@ -141,7 +141,7 @@ public class MainActivity extends Activity {
 			});
 		b.setNegativeButton("Telegram", new DialogInterface.OnClickListener() { // обработка нажатия кнопки "Telegram"
 				public void onClick(DialogInterface d, int i) {
-					startActivity(new Intent (Intent.ACTION_VIEW, Uri.parse("https://t.me/rx1310")));
+					startActivity(new Intent (Intent.ACTION_VIEW, Uri.parse("https://t.me/rx1310_dev")));
 				}
 			});
 		b.setNeutralButton(R.string.about_dialog_action_source_code, new DialogInterface.OnClickListener() { // обработка нажатия кнопки "Да"
