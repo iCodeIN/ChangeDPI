@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest
 	xmlns:android="http://schemas.android.com/apk/res/android"
-    package="o1310.rx1310.app.cdpi" >
+    package="ru.rx1310.app.cdpi" >
 	
-    <original-package android:name="o1310.rx1310.app.cdpi" />
+    <original-package android:name="ru.rx1310.app.cdpi" />
 
 	<supports-screens 
 		android:anyDensity="true" 
