@@ -4,7 +4,7 @@
  * @license     MIT License
  */
 
-package o1310.rx1310.app.cdpi;
+package ru.rx1310.app.cdpi;
 
 import java.io.ByteArrayOutputStream;
 import java.io.DataOutputStream;

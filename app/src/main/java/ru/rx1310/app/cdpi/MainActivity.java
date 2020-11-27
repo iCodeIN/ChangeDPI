@@ -4,7 +4,7 @@
  * @license     MIT License
  */
 
-package o1310.rx1310.app.cdpi;
+package ru.rx1310.app.cdpi;
 
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -23,8 +23,8 @@ import android.widget.Toast;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import o1310.rx1310.app.cdpi.MainActivity;
-import o1310.rx1310.app.cdpi.R;
+import ru.rx1310.app.cdpi.MainActivity;
+import ru.rx1310.app.cdpi.R;
 import android.text.TextUtils;
 
 public class MainActivity extends Activity {
@@ -51,7 +51,7 @@ public class MainActivity extends Activity {
 			@Override
 			public void onClick(View v) {
 				aboutDialog();
-				Toast.makeText(MainActivity.this, "made with " + ("♥️") + " by rx1310 (from o1310)", Toast.LENGTH_LONG).show(); // Маленькая пасхалка
+				Toast.makeText(MainActivity.this, "made with " + ("♥️") + " by rx1310", Toast.LENGTH_LONG).show(); // Маленькая пасхалка
 			}
 		});
 		
@@ -145,12 +145,12 @@ public class MainActivity extends Activity {
 			});
 		b.setNegativeButton("Telegram", new DialogInterface.OnClickListener() { // обработка нажатия кнопки "Telegram"
 				public void onClick(DialogInterface d, int i) {
-					startActivity(new Intent (Intent.ACTION_VIEW, Uri.parse("https://t.me/o1310")));
+					startActivity(new Intent (Intent.ACTION_VIEW, Uri.parse("https://t.me/rx1310")));
 				}
 			});
 		b.setNeutralButton(R.string.about_dialog_action_source_code, new DialogInterface.OnClickListener() { // обработка нажатия кнопки "Да"
 				public void onClick(DialogInterface d, int i) {
-					startActivity(new Intent (Intent.ACTION_VIEW, Uri.parse("https://github.com/o1310/ChangeDPI")));
+					startActivity(new Intent (Intent.ACTION_VIEW, Uri.parse("https://github.com/rx1310/ChangeDPI")));
 				}
 			});
 
